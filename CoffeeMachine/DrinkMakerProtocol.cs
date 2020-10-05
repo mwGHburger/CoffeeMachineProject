@@ -2,6 +2,7 @@ using System;
 
 namespace CoffeeMachine
 {
+    //TO-DO: add git ignore file next time.
     public static class DrinkMakerProtocol
     {
         public static string TranslateOrder(Order order)
