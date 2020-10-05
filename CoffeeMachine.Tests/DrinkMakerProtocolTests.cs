@@ -7,13 +7,21 @@ namespace CoffeeMachine.Tests
     {
         [Theory]
         [InlineData("T:1:0", "tea", 1)]
-        // TODO: IMPLEMENT LOGIC FOR TRANSLATEORDER METHOD
+        [InlineData("H::", "chocolate", 0)]
         [InlineData("C:2:0", "coffee", 2)]
-        public void ShouldReturnCorrectString_FromOrderObject(string expected, string drinkType, int sugarQuantity)
+        public void TranslateOrder_ShouldReturnCorrectString_FromOrderObject(string expected, string drinkType, int sugarQuantity)
         {
             Order order = new Order(drinkType,sugarQuantity);
             var actualResult = DrinkMakerProtocol.TranslateOrder(order);
             Assert.Equal(expected, actualResult);
+        }
+        
+        [Fact]
+        public void TranslateOrderMessage_ShouldReturnCorrectString_FromOrderObject()
+        {
+            Order order = new Order("coffee",1,"Message-content");
+            var actualResult = DrinkMakerProtocol.TranslateOrderMessage(order);
+            Assert.Equal("M:Message-content", actualResult);
         }
 
     }

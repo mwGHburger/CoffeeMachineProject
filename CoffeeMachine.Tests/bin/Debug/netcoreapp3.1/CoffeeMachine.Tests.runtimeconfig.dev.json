@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/Michael.Wang/.dotnet/store/|arch|/|tfm|",
-      "/Users/Michael.Wang/.nuget/packages"
+      "/Users/lanzhou.jiang/.dotnet/store/|arch|/|tfm|",
+      "/Users/lanzhou.jiang/.nuget/packages"
     ]
   }
 }
