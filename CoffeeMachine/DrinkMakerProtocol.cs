@@ -5,6 +5,14 @@ namespace CoffeeMachine
     //TO-DO: add git ignore file next time.
     public static class DrinkMakerProtocol
     {
+        
+        public static string AssessPayment(Order order, Payment payment)
+        {
+            var drinkCost = order.DrinkType.Cost;
+            var isPaymentEnough = payment.Amount >= drinkCost;
+            
+            return (isPaymentEnough) ? TranslateOrder(order) : ProduceMessage($"Not enough, missing {drinkCost - payment.Amount} euro");
+        }
         public static string TranslateOrder(Order order)
         {
             
@@ -27,7 +35,7 @@ namespace CoffeeMachine
 
         private static string GetDrinkTypeCharacter(Order order)
         {
-            switch (order.DrinkType)
+            switch (order.DrinkType.Name)
             {
                 case "tea":
                     return "T";
@@ -40,9 +48,9 @@ namespace CoffeeMachine
             throw new Exception();
         }
 
-        public static string TranslateOrderMessage(Order order)
+        private static string ProduceMessage(string message)
         {
-            return $"M:{order.Message}";
+            return $"M:{message}";
         }
     }
 }
