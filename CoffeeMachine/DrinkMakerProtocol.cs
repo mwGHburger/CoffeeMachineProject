@@ -15,7 +15,6 @@ namespace CoffeeMachine
         }
         public static string TranslateOrder(Order order)
         {
-            
             var drinkTypeCharacter = GetDrinkTypeCharacter(order);
             var sugarQuantity = GetSugarQuantity(order);
             var stickOrder = GetStickOrder(order);

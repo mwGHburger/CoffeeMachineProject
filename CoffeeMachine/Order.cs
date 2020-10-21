@@ -1,6 +1,6 @@
 namespace CoffeeMachine
 {
-    public class Order
+    public class Order : IOrder
     {
         public Order(DrinkType drinkType, int sugarQuantity, string message="")
         {

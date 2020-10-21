@@ -194,3 +194,5 @@
 /Users/lanzhou.jiang/CoffeeMachineProject/CoffeeMachine.Tests/obj/Debug/netcoreapp3.1/CoffeeMachine.Tests.dll
 /Users/lanzhou.jiang/CoffeeMachineProject/CoffeeMachine.Tests/obj/Debug/netcoreapp3.1/CoffeeMachine.Tests.pdb
 /Users/lanzhou.jiang/CoffeeMachineProject/CoffeeMachine.Tests/obj/Debug/netcoreapp3.1/CoffeeMachine.Tests.genruntimeconfig.cache
+/Users/Michael.Wang/Desktop/MYOB/Pair Programming/CoffeeMachineProject/CoffeeMachine.Tests/bin/Debug/netcoreapp3.1/Castle.Core.dll
+/Users/Michael.Wang/Desktop/MYOB/Pair Programming/CoffeeMachineProject/CoffeeMachine.Tests/bin/Debug/netcoreapp3.1/Moq.dll
