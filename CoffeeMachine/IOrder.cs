@@ -1,7 +1,7 @@
 namespace CoffeeMachine
 {
-    public class IOrder
+    public interface IOrder
     {
-        public DrinkType DrinkType { get; private set; }
+        DrinkType DrinkType { get;}
     }
 }
