@@ -17,7 +17,7 @@ namespace CoffeeMachine.Tests
                 mockOrder2.Object,
                 mockOrder3.Object
             };
-
+            
             mockOrder1.Setup(x => x.DrinkType).Returns(new DrinkType("coffee", 0.6));
             mockOrder2.Setup(x => x.DrinkType).Returns(new DrinkType("coffee", 0.6));
             mockOrder3.Setup(x => x.DrinkType).Returns(new DrinkType("tea", 0.5));
@@ -26,7 +26,7 @@ namespace CoffeeMachine.Tests
 
             var actual = drinkDictionaryGenerator.Generate(orders);
 
-            Assert.Equal(1, actual["coffee"]);
+            Assert.Equal(2, actual["coffee"]);
         }
     }
 }
