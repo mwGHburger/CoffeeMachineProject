@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c45f1d-0c7e-4db1-8a7a-21d263f79031" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +42,11 @@
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/.gitignore" />
         <option value="$PROJECT_DIR$/CoffeeMachine/.gitignore" />
         <option value="$PROJECT_DIR$/CoffeeMachine/IOrder.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Instruction.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" />
       </list>
     </option>
   </component>
@@ -90,7 +92,7 @@
       <updated>1601856408142</updated>
       <workItem from="1601856421843" duration="3410000" />
       <workItem from="1603859060527" duration="2720000" />
-      <workItem from="1604462822359" duration="1678000" />
+      <workItem from="1604462822359" duration="2949000" />
     </task>
     <servers />
   </component>
