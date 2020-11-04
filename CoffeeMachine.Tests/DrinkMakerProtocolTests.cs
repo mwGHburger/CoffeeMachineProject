@@ -6,6 +6,19 @@ namespace CoffeeMachine.Tests
     // TODO: Is it okay to go back and change initial tests when we add new features?
     public class DrinkMakerProtocolTests
     {
+        
+        [Theory]
+        [InlineData( "tea", 0.4, 1)]
+        [InlineData("chocolate", 0.5, 0)]
+        [InlineData( "coffee", 0.6, 2)]
+        public void TranslateOrder_ShouldReturnInstructionObject(string drinkName, double drinkCost, int sugarQuantity)
+        {
+            var drinkType = new DrinkType(drinkName, drinkCost);
+            Order order = new Order(drinkType,sugarQuantity);
+            var result = DrinkMakerProtocol.TranslateOrder(order);
+            Assert.IsType<Instruction>(result);
+        }
+        
         [Theory]
         [InlineData("T:1:0", "tea", 0.4, 1)]
         [InlineData("H::", "chocolate", 0.5, 0)]

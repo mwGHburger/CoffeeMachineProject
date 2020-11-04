@@ -15,6 +15,7 @@
         <e p="DrinkDictionaryGenerator.cs" t="Include" />
         <e p="DrinkMakerProtocol.cs" t="Include" />
         <e p="DrinkType.cs" t="Include" />
+        <e p="Instruction.cs" t="Include" />
         <e p="IOrder.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
