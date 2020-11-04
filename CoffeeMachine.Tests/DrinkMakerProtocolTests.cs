@@ -28,7 +28,7 @@ namespace CoffeeMachine.Tests
             var drinkType = new DrinkType(drinkName, drinkCost);
             Order order = new Order(drinkType,sugarQuantity);
             var actualResult = DrinkMakerProtocol.TranslateOrder(order);
-            Assert.Equal(expected, actualResult);
+            Assert.Equal(expected, actualResult.InstructionMessage);
         }
 
         [Fact]
@@ -40,7 +40,7 @@ namespace CoffeeMachine.Tests
             var payment = new Payment(1);
             var actualResult = DrinkMakerProtocol.AssessPayment(order, payment);
 
-            Assert.Equal("T:1:0", actualResult);
+            Assert.Equal("T:1:0", actualResult.InstructionMessage);
         }
 
         [Fact]
@@ -53,7 +53,7 @@ namespace CoffeeMachine.Tests
 
             var actualResult = DrinkMakerProtocol.AssessPayment(order, payment);
 
-            Assert.Equal($"M:Not enough, missing {expectedChange} euro", actualResult);
+            Assert.Equal($"M:Not enough, missing {expectedChange} euro", actualResult.InstructionMessage);
         }
     }
 }

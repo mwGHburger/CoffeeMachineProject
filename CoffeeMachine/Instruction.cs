@@ -7,6 +7,11 @@ namespace CoffeeMachine
             InstructionMessage = FormatInstructionMessage(drinkTypeCharacter, sugarQuantity, stickOrder);
         }
 
+        public Instruction(string customerMessage)
+        {
+            InstructionMessage = $"M:{customerMessage}";
+        }
+
         private static string FormatInstructionMessage(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
         {
             return $"{drinkTypeCharacter}:{sugarQuantity}:{stickOrder}";

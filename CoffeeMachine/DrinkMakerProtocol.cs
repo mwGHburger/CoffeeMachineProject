@@ -6,20 +6,20 @@ namespace CoffeeMachine
     public static class DrinkMakerProtocol
     {
         
-        public static string AssessPayment(Order order, Payment payment)
+        public static Instruction AssessPayment(Order order, Payment payment)
         {
             var drinkCost = order.DrinkType.Cost;
             var isPaymentEnough = payment.Amount >= drinkCost;
             
             return (isPaymentEnough) ? TranslateOrder(order) : ProduceMessage($"Not enough, missing {drinkCost - payment.Amount} euro");
         }
-        public static string TranslateOrder(Order order)
+        public static Instruction TranslateOrder(Order order)
         {
             var drinkTypeCharacter = GetDrinkTypeCharacter(order);
             var sugarQuantity = GetSugarQuantity(order);
             var stickOrder = GetStickOrder(order);
             
-            return $"{drinkTypeCharacter}:{sugarQuantity}:{stickOrder}";
+            return new Instruction(drinkTypeCharacter, sugarQuantity, stickOrder);
         }
 
         private static string GetStickOrder(Order order)
@@ -47,9 +47,9 @@ namespace CoffeeMachine
             throw new Exception();
         }
 
-        private static string ProduceMessage(string message)
+        private static Instruction ProduceMessage(string message)
         {
-            return $"M:{message}";
+            return new Instruction(message);
         }
     }
 }
