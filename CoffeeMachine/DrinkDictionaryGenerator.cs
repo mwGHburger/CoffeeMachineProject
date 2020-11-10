@@ -42,6 +42,6 @@ namespace CoffeeMachine
             }
             return Revenue;
         }
-        //TO-Do: Add Output reporting modules and Clean up tests!
+        
     }
 }
