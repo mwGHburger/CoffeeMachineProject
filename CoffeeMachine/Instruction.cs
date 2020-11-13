@@ -2,6 +2,10 @@ namespace CoffeeMachine
 {
     public class Instruction
     {
+        // TODO: Explanation on how to structure this class
+        // instruction.InstructionMessage
+        // OR
+        // instruction.ToString()
         public Instruction(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
         {
             InstructionMessage = FormatInstructionMessage(drinkTypeCharacter, sugarQuantity, stickOrder);
@@ -25,5 +29,6 @@ namespace CoffeeMachine
         //To-Do: add To-string method later.
 
         public string InstructionMessage { get; private set; }
+        
     }
 }
