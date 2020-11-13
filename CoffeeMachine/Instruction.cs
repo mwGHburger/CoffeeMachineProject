@@ -12,10 +12,17 @@ namespace CoffeeMachine
             InstructionMessage = $"M:{customerMessage}";
         }
 
-        private static string FormatInstructionMessage(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
+        private string FormatInstructionMessage(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
         {
             return $"{drinkTypeCharacter}:{sugarQuantity}:{stickOrder}";
         }
+
+        // public override string ToString()
+        // {
+        //     return $"{drinkTypeCharacter}:{sugarQuantity}:{stickOrder}";
+        // }
+        //To-Do: keep properties instead of one InstructionMessage.
+        //To-Do: add To-string method later.
 
         public string InstructionMessage { get; private set; }
     }
