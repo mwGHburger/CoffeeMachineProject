@@ -23,9 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c45f1d-0c7e-4db1-8a7a-21d263f79031" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkTypeTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/Chocolate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/Coffee.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/IDrinkType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/Tea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/IOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/IOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/Order.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +47,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CoffeeMachine/Order.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/.gitignore" />
         <option value="$PROJECT_DIR$/CoffeeMachine/.gitignore" />
-        <option value="$PROJECT_DIR$/CoffeeMachine/IOrder.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Instruction.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/DrinkDictionaryGenerator.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkTypeTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/IOrder.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Order.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkDictionaryGeneratorTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Tea.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Coffee.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/IDrinkType.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Chocolate.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
       </list>
     </option>
   </component>
@@ -62,7 +76,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected=".NET Project.CoffeeMachine">
+  <component name="RunManager">
     <configuration name="CoffeeMachine" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -197,5 +211,13 @@
       <screen x="383" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1850" height="362" key="GridCell.Tab.4.right/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1603892175105" />
+    <state x="1069" y="-925" key="RiderGenerateDialog" timestamp="1605498612357">
+      <screen x="383" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1069" y="-925" key="RiderGenerateDialog/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1605498612357" />
+    <state x="483" y="-957" width="1632" height="857" key="VCS.FileHistoryDialog" timestamp="1605499471596">
+      <screen x="383" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="483" y="-957" width="1632" height="857" key="VCS.FileHistoryDialog/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1605499471596" />
   </component>
 </project>

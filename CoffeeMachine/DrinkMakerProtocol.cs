@@ -34,17 +34,7 @@ namespace CoffeeMachine
 
         private static string GetDrinkTypeCharacter(Order order)
         {
-            switch (order.DrinkType.Name)
-            {
-                case "tea":
-                    return "T";
-                case "coffee":
-                    return "C";
-                case "chocolate":
-                    return "H";
-            }
-
-            throw new Exception();
+            return order.DrinkType.Character;
         }
 
         private static Instruction ProduceMessage(string message)

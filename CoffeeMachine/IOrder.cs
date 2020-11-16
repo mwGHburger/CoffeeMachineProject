@@ -2,6 +2,6 @@ namespace CoffeeMachine
 {
     public interface IOrder
     {
-        DrinkType DrinkType { get;}
+        IDrinkType DrinkType { get;}
     }
 }
