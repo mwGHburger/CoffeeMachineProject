@@ -2,13 +2,16 @@ namespace CoffeeMachine
 {
     public class Order : IOrder
     {
-        public Order(IDrinkType drinkType, int sugarQuantity, string message="")
+        public Order(IDrinkType drinkType, int sugarQuantity, bool isExtraHot = false)
         {
             DrinkType = drinkType;
             SugarQuantity = sugarQuantity;
+            IsExtraHot = isExtraHot;
         }
 
-        public IDrinkType DrinkType { get; private set; }
-        public int SugarQuantity { get; private set; }
+        public IDrinkType DrinkType { get; }
+        public int SugarQuantity { get; }
+
+        public bool IsExtraHot { get;}
     }
 }

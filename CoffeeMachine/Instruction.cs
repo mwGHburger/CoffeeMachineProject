@@ -6,9 +6,9 @@ namespace CoffeeMachine
         // instruction.InstructionMessage
         // OR
         // instruction.ToString()
-        public Instruction(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
+        public Instruction(string drinkTypeCharacter, string sugarQuantity, string stickOrder, string isExtraHot)
         {
-            InstructionMessage = FormatInstructionMessage(drinkTypeCharacter, sugarQuantity, stickOrder);
+            InstructionMessage = FormatInstructionMessage(drinkTypeCharacter, sugarQuantity, stickOrder, isExtraHot);
         }
 
         public Instruction(string customerMessage)
@@ -16,9 +16,9 @@ namespace CoffeeMachine
             InstructionMessage = $"M:{customerMessage}";
         }
 
-        private static string FormatInstructionMessage(string drinkTypeCharacter, string sugarQuantity, string stickOrder)
+        private static string FormatInstructionMessage(string drinkTypeCharacter, string sugarQuantity, string stickOrder, string isExtraHot)
         {
-            return $"{drinkTypeCharacter}:{sugarQuantity}:{stickOrder}";
+            return $"{drinkTypeCharacter}{isExtraHot}:{sugarQuantity}:{stickOrder}";
         }
 
         public string InstructionMessage { get; private set; }

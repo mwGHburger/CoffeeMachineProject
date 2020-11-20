@@ -7,7 +7,8 @@ namespace CoffeeMachine
             var drinkTypeCharacter = GetDrinkTypeCharacter(order);
             var sugarQuantity = GetSugarQuantity(order);
             var stickOrder = GetStickOrder(order);
-            return new Instruction(drinkTypeCharacter, sugarQuantity, stickOrder);
+            var isExtraHot = GetIsExtraHotInfo(order);
+            return new Instruction(drinkTypeCharacter, sugarQuantity, stickOrder, isExtraHot);
         }
         public Instruction ProduceMessage(string message)
         {
@@ -27,6 +28,11 @@ namespace CoffeeMachine
         private string GetDrinkTypeCharacter(Order order)
         {
             return order.DrinkType.Character;
+        }
+        
+        private string GetIsExtraHotInfo(Order order)
+        {
+            return order.IsExtraHot ? "h" : "";
         }
     }
 }
