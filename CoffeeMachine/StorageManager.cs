@@ -19,8 +19,11 @@ namespace CoffeeMachine
             drink.ReduceQuantity();
         }
 
-        // TODO: Add email notifier
-        // TODO: Check if there is enough quantity
+        public bool IsEmpty(IDrinkType drinkType)
+        {
+            var drinkStorage = FindDrinkStorage(drinkType);
+            return _drinkQuantityChecker.IsEmpty(drinkStorage);
+        }
 
         private IDrinkStorage FindDrinkStorage(IDrinkType drinkType)
         {

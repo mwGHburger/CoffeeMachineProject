@@ -24,5 +24,37 @@ namespace CoffeeMachine.Tests
 
             Assert.Equal(4, teaStorage.Quantity);
         }
+
+        [Fact]
+        public void IsEmpty_ShouldReturnTrue_IfQuantityForGivenDrinkTypeIs0()
+        {
+            var tea = new Tea();
+            var teaStorage = new Storage(0, tea);
+            var drinks = new List<IDrinkStorage>()
+            {
+                teaStorage
+            };
+
+            var drinkQuantityChecker = new DrinkQuantityChecker();
+            var storageManager = new StorageManager(drinks, drinkQuantityChecker);
+
+            Assert.True(storageManager.IsEmpty(tea));
+        }
+
+        [Fact]
+        public void IsEmpty_ShouldReturnFalse_IfQuantityForGivenDrinkTypeAbove0()
+        {
+            var tea = new Tea();
+            var teaStorage = new Storage(1, tea);
+            var drinks = new List<IDrinkStorage>()
+            {
+                teaStorage
+            };
+
+            var drinkQuantityChecker = new DrinkQuantityChecker();
+            var storageManager = new StorageManager(drinks, drinkQuantityChecker);
+
+            Assert.False(storageManager.IsEmpty(tea));
+        }
     }
 }

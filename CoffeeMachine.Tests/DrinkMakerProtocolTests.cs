@@ -5,8 +5,24 @@ namespace CoffeeMachine.Tests
 {
     public class DrinkMakerProtocolTests
     {
-        
+        [Fact]
+        public void HandleOrderShould_ReturnCorrectMessage_WhenStorageIsEmpty()
+        {
+            var tea = new Tea();
+            // TODO: Continue
+            // var storageManager = new StorageManager();
+            var paymentAssessor = new PaymentAssessor();
+            var orderTranslator = new OrderTranslator();
+            var order = new Order(tea,1);
+            var payment = new Payment(1);
+            var drinkMakerProtocol = new DrinkMakerProtocol(paymentAssessor, orderTranslator);
 
+            var actualResult = drinkMakerProtocol.HandleOrder(order, payment);
+        
+            Assert.Equal("M: tea is empty", actualResult.InstructionMessage);
+        }
+
+        
         [Fact]
         public void HandleOrderShould_ReturnCorrectOrderString_WhenSufficientPaymentAmount()
         {
