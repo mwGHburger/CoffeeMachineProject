@@ -18,13 +18,16 @@
         <e p="DrinkMakerProtocol.cs" t="Include" />
         <e p="DrinkQuantityChecker.cs" t="Include" />
         <e p="DrinkType.cs" t="Include" />
+        <e p="EmailNotifier.cs" t="Include" />
         <e p="IDrinkQuantityChecker.cs" t="Include" />
         <e p="IDrinkStorage.cs" t="Include" />
         <e p="IDrinkType.cs" t="Include" />
         <e p="Instruction.cs" t="Include" />
         <e p="IOrder.cs" t="Include" />
         <e p="IOrderTranslator.cs" t="Include" />
+        <e p="IOutput.cs" t="Include" />
         <e p="IPaymentAssessor.cs" t="Include" />
+        <e p="IStorageManager.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -51,7 +54,7 @@
         <e p="DrinkDictionaryGeneratorTests.cs" t="Include" />
         <e p="DrinkMakerProtocolTests.cs" t="Include" />
         <e p="DrinkQuantityCheckerTests.cs" t="Include" />
-        <e p="DrinkTypeTests.cs" t="Include" />
+        <e p="EmailNotifierTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

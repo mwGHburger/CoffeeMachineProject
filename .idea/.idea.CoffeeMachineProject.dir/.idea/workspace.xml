@@ -23,13 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c45f1d-0c7e-4db1-8a7a-21d263f79031" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/IStorageManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/OrderTranslatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/OrderTranslatorTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/Instruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/Instruction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/OrderTranslator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/OrderTranslator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Folder.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkTypeTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/IPaymentAssessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/IPaymentAssessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/PaymentAssessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/PaymentAssessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/StandardMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/StandardMessages.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +54,18 @@
         <option value="$PROJECT_DIR$/CoffeeMachine/Tea.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Coffee.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/IDrinkType.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Chocolate.cs" />
-        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Order.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/OrderTranslatorTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/OrderTranslator.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/Instruction.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/IStorageManager.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/StandardMessages.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/IPaymentAssessor.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/PaymentAssessor.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +112,7 @@
       <workItem from="1601856421843" duration="3410000" />
       <workItem from="1603859060527" duration="2720000" />
       <workItem from="1604462822359" duration="2949000" />
+      <workItem from="1606179058883" duration="4143000" />
     </task>
     <servers />
   </component>
