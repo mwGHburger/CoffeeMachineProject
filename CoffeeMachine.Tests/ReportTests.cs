@@ -5,11 +5,13 @@ namespace CoffeeMachine.Tests
 {
     public class ReportTests
     {
+        Dictionary<string, int> orders = new Dictionary<string, int>();
+        
         [Fact]
         public void GenerateReport_ShouldReturnReportString()
         {
             var revenue = 10;
-            var orders = new Dictionary<string, int>();
+            
             orders.Add("Tea", 5);
             orders.Add("Chocolate", 5);
             orders.Add("Coffee", 6);
@@ -31,7 +33,6 @@ namespace CoffeeMachine.Tests
         public void GenerateReport_ShouldReturnReportString_2()
         {
             var revenue = 2;
-            var orders = new Dictionary<string, int>();
             orders.Add("Tea", 5);
             var report = new Report(revenue, orders);
 

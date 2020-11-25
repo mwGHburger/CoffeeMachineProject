@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace CoffeeMachine
 {
-    public class Repository
+    public class OrderRepository
     {
         public List<IOrder> Orders { get;} = new List<IOrder>();
 

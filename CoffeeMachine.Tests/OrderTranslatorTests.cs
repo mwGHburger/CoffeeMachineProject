@@ -5,13 +5,15 @@ namespace CoffeeMachine.Tests
 {
     public class OrderTranslatorTests
     {
+        Mock<IDrinkType> drinkType = new Mock<IDrinkType>();
+        OrderTranslator orderTranslator = new OrderTranslator();
+
         [Fact]
         public void TranslateOrder_ShouldReturnInstructionObject()
         {
             var sugarQuantity = 2;
-            var drinkType = new Mock<IDrinkType>();
+            
             Order order = new Order(drinkType.Object,sugarQuantity);
-            var orderTranslator = new OrderTranslator();
 
             drinkType.Setup(x => x.Name).Returns("tea");
 
@@ -27,9 +29,7 @@ namespace CoffeeMachine.Tests
         //Open-Close principle
         public void TranslateOrder_ShouldReturnCorrectString_FromOrderObject(string expected, string drinkName, double drinkCost,string character, int sugarQuantity)
         {
-            var drinkType = new Mock<IDrinkType>();
-            Order order = new Order(drinkType.Object,sugarQuantity);
-            var orderTranslator = new OrderTranslator();
+            Order order = new Order(drinkType.Object, sugarQuantity);
 
             drinkType.Setup(x => x.Name).Returns(drinkName);
             drinkType.Setup(x => x.Cost).Returns(drinkCost);
@@ -45,16 +45,11 @@ namespace CoffeeMachine.Tests
         [InlineData("Th:2:0", "tea", 0.4,"T", 2, true)]
         public void TranslateOrder_ShouldReturnCorrectString_FromExtraHotOrderObject(string expected, string drinkName, double drinkCost,string character, int sugarQuantity, bool isExtraHot)
         {
-            var drinkType = new Mock<IDrinkType>();
-            Order order = new Order(drinkType.Object,sugarQuantity, isExtraHot);
-            
-            
-            var orderTranslator = new OrderTranslator();
+            Order order = new Order(drinkType.Object, sugarQuantity, isExtraHot);
 
             drinkType.Setup(x => x.Name).Returns(drinkName);
             drinkType.Setup(x => x.Cost).Returns(drinkCost);
             drinkType.Setup(x => x.Character).Returns(character);
-            
             
             var actualResult = orderTranslator.TranslateOrder(order);
             Assert.Equal(expected, actualResult.InstructionMessage);

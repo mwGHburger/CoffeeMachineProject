@@ -4,11 +4,12 @@ namespace CoffeeMachine.Tests
 {
     public class DrinkQuantityCheckerTests
     {
+        DrinkQuantityChecker drinkQuantityChecker = new DrinkQuantityChecker();
+        
         [Fact]
         public void isEmpty_ShouldReturnTrueWhenDrinkQuantityIs0()
         {
-            var drinkQuantityChecker = new DrinkQuantityChecker();
-            var teaStorage = new Storage(0, new Tea());
+            var teaStorage = new Storage(0, TestHelper.SetupTea());
 
             var actual = drinkQuantityChecker.IsEmpty(teaStorage);
 
@@ -18,8 +19,7 @@ namespace CoffeeMachine.Tests
         [Fact]
         public void isEmpty_ShouldReturnFalseWhenDrinkQuantityIsAbove0()
         {
-            var drinkQuantityChecker = new DrinkQuantityChecker();
-            var teaStorage = new Storage(1, new Tea());
+            var teaStorage = new Storage(1, TestHelper.SetupTea());
 
             var actual = drinkQuantityChecker.IsEmpty(teaStorage);
 

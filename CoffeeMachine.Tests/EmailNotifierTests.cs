@@ -9,7 +9,7 @@ namespace CoffeeMachine.Tests
         public void NotifyMissingDrink_ShouldOutputMessageToConsole()
         {
             var mockConsoleOutput = new Mock<IOutput>();
-            var tea = new Tea();
+            var tea = TestHelper.SetupTea();
             var emailNotifier = new EmailNotifier(mockConsoleOutput.Object);
 
             emailNotifier.NotifyMissingDrink(tea);

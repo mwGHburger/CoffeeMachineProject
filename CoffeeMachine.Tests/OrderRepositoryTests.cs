@@ -8,7 +8,7 @@ namespace CoffeeMachine.Tests
         [Fact]
         public void ShouldBeAbleToAddOrderToOrderList()
         {
-            var repository = new Repository();
+            var repository = new OrderRepository();
             Mock<IOrder> mockOrder = new Mock<IOrder>();
             
             Assert.Empty(repository.Orders);

@@ -22,6 +22,5 @@ namespace CoffeeMachine
             var revenue = $"Total Revenue: ${_revenue}\n";
             return header + body + revenue;
         }
-        //TODO: Clean up tests!, Console Output, Report class design, fifth iteration, instruction class design
     }
 }

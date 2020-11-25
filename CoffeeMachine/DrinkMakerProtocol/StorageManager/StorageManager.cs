@@ -6,11 +6,14 @@ namespace CoffeeMachine
     {
         private List<IDrinkStorage> _drinks;
         private IDrinkQuantityChecker _drinkQuantityChecker;
+        private INotifier _notifier;
 
-        public StorageManager(List<IDrinkStorage> drinks, IDrinkQuantityChecker drinkQuantityChecker)
+        // Make Database external
+        public StorageManager(List<IDrinkStorage> drinks, IDrinkQuantityChecker drinkQuantityChecker, INotifier notifier)
         {
             _drinks = drinks;
             _drinkQuantityChecker = drinkQuantityChecker;
+            _notifier = notifier;
         }
 
         public void ReduceDrinkQuantity(IDrinkType drinkType)
@@ -22,7 +25,12 @@ namespace CoffeeMachine
         public bool IsEmpty(IDrinkType drinkType)
         {
             var drinkStorage = FindDrinkStorage(drinkType);
-            return _drinkQuantityChecker.IsEmpty(drinkStorage);
+            if(_drinkQuantityChecker.IsEmpty(drinkStorage))
+            {
+                _notifier.NotifyMissingDrink(drinkType);
+                return true;
+            }
+            return false;
         }
 
         private IDrinkStorage FindDrinkStorage(IDrinkType drinkType)

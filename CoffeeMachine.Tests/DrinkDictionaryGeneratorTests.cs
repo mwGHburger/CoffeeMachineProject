@@ -7,21 +7,22 @@ namespace CoffeeMachine.Tests
 {
     public class DrinkDictionaryGeneratorTests
     {
+        Mock<IOrder> mockOrder1 = new Mock<IOrder>();
+        Mock<IOrder> mockOrder2 = new Mock<IOrder>();
+        Mock<IOrder> mockOrder3 = new Mock<IOrder>();
+
         [Fact]
         public void ShouldGenerateDictionaryDrinkTypeAndQuantitySold()
         {
-            var mockOrder1 = new Mock<IOrder>();
-            var mockOrder2 = new Mock<IOrder>();
-            var mockOrder3 = new Mock<IOrder>();
             var orders = new List<IOrder>{
                 mockOrder1.Object,
                 mockOrder2.Object,
                 mockOrder3.Object
             };
             
-            mockOrder1.Setup(x => x.DrinkType).Returns(new Coffee());
-            mockOrder2.Setup(x => x.DrinkType).Returns(new Coffee());
-            mockOrder3.Setup(x => x.DrinkType).Returns(new Tea());
+            mockOrder1.Setup(x => x.DrinkType).Returns(TestHelper.SetupCoffee());
+            mockOrder2.Setup(x => x.DrinkType).Returns(TestHelper.SetupCoffee());
+            mockOrder3.Setup(x => x.DrinkType).Returns(TestHelper.SetupTea());
 
             var drinkDictionaryGenerator = new DrinkDictionaryGenerator();
 
@@ -44,9 +45,6 @@ namespace CoffeeMachine.Tests
         [Fact]
         public void ShouldCalculateTotalMoneyForListOfOrders()
         {
-            Mock<IOrder> mockOrder1 = new Mock<IOrder>();
-            Mock<IOrder> mockOrder2 = new Mock<IOrder>();
-            Mock<IOrder> mockOrder3 = new Mock<IOrder>();
             var orders = new List<IOrder>{
                 mockOrder1.Object,
                 mockOrder2.Object,
@@ -54,9 +52,9 @@ namespace CoffeeMachine.Tests
             };
             var expected = 1.6;
 
-            mockOrder1.Setup(x => x.DrinkType).Returns(new Coffee());
-            mockOrder2.Setup(x => x.DrinkType).Returns(new Coffee());
-            mockOrder3.Setup(x => x.DrinkType).Returns(new Tea());
+            mockOrder1.Setup(x => x.DrinkType).Returns(TestHelper.SetupCoffee());
+            mockOrder2.Setup(x => x.DrinkType).Returns(TestHelper.SetupCoffee());
+            mockOrder3.Setup(x => x.DrinkType).Returns(TestHelper.SetupTea());
 
             var drinkDictionaryGenerator = new DrinkDictionaryGenerator();
 
@@ -64,5 +62,6 @@ namespace CoffeeMachine.Tests
 
             Assert.Equal(expected, actual);
         }
+
     }
 }
