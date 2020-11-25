@@ -8,6 +8,8 @@ namespace CoffeeMachine
         private IDrinkQuantityChecker _drinkQuantityChecker;
         private INotifier _notifier;
 
+        // DrinkReporsitory.cs <- List of drinks
+        // DrinkService <- fetch, save --- solely DB actions - CRUD 
         // Make Database external
         public StorageManager(List<IDrinkStorage> drinks, IDrinkQuantityChecker drinkQuantityChecker, INotifier notifier)
         {

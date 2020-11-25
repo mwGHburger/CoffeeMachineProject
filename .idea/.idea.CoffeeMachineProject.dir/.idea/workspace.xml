@@ -23,16 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c45f1d-0c7e-4db1-8a7a-21d263f79031" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CoffeeMachine/IStorageManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkTypeTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/IPaymentAssessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/IPaymentAssessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/PaymentAssessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/PaymentAssessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoffeeMachine/StandardMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/StandardMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +59,7 @@
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +75,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected=".NET Project.CoffeeMachine">
+  <component name="RunManager">
     <configuration name="CoffeeMachine" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />

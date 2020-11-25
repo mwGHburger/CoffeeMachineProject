@@ -11,23 +11,43 @@
       <e p="CoffeeMachine" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Chocolate.cs" t="Include" />
-        <e p="Coffee.cs" t="Include" />
         <e p="CoffeeMachine.csproj" t="IncludeRecursive" />
-        <e p="DrinkDictionaryGenerator.cs" t="Include" />
-        <e p="DrinkMakerProtocol.cs" t="Include" />
-        <e p="DrinkQuantityChecker.cs" t="Include" />
-        <e p="DrinkType.cs" t="Include" />
-        <e p="EmailNotifier.cs" t="Include" />
-        <e p="IDrinkQuantityChecker.cs" t="Include" />
-        <e p="IDrinkStorage.cs" t="Include" />
-        <e p="IDrinkType.cs" t="Include" />
-        <e p="Instruction.cs" t="Include" />
-        <e p="IOrder.cs" t="Include" />
-        <e p="IOrderTranslator.cs" t="Include" />
+        <e p="DrinkMakerProtocol" t="Include">
+          <e p="DrinkMakerProtocol.cs" t="Include" />
+          <e p="Order" t="Include">
+            <e p="IOrder.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
+          </e>
+          <e p="OrderTranslator" t="Include">
+            <e p="Instruction.cs" t="Include" />
+            <e p="IOrderTranslator.cs" t="Include" />
+            <e p="OrderTranslator.cs" t="Include" />
+          </e>
+          <e p="Payment.cs" t="Include" />
+          <e p="PaymentAssessor" t="Include">
+            <e p="IPaymentAssessor.cs" t="Include" />
+            <e p="PaymentAssessor.cs" t="Include" />
+          </e>
+          <e p="StorageManager" t="Include">
+            <e p="DrinkQuantityChecker.cs" t="Include" />
+            <e p="IDrinkQuantityChecker.cs" t="Include" />
+            <e p="IDrinkStorage.cs" t="Include" />
+            <e p="IStorageManager.cs" t="Include" />
+            <e p="Storage.cs" t="Include" />
+            <e p="StorageManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="DrinkType" t="Include">
+          <e p="Chocolate.cs" t="Include" />
+          <e p="Coffee.cs" t="Include" />
+          <e p="IDrinkType.cs" t="Include" />
+          <e p="Tea.cs" t="Include" />
+        </e>
         <e p="IOutput.cs" t="Include" />
-        <e p="IPaymentAssessor.cs" t="Include" />
-        <e p="IStorageManager.cs" t="Include" />
+        <e p="Notifier" t="Include">
+          <e p="EmailNotifier.cs" t="Include" />
+          <e p="INotifier.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -35,17 +55,13 @@
             </e>
           </e>
         </e>
-        <e p="Order.cs" t="Include" />
-        <e p="OrderTranslator.cs" t="Include" />
-        <e p="Payment.cs" t="Include" />
-        <e p="PaymentAssessor.cs" t="Include" />
         <e p="Program.cs" t="Include" />
-        <e p="Report.cs" t="Include" />
-        <e p="Repository.cs" t="Include" />
+        <e p="Reporting" t="Include">
+          <e p="DrinkDictionaryGenerator.cs" t="Include" />
+          <e p="OrderRepository.cs" t="Include" />
+          <e p="Report.cs" t="Include" />
+        </e>
         <e p="StandardMessages.cs" t="Include" />
-        <e p="Storage.cs" t="Include" />
-        <e p="StorageManager.cs" t="Include" />
-        <e p="Tea.cs" t="Include" />
       </e>
       <e p="CoffeeMachine.Tests" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
@@ -62,12 +78,13 @@
             </e>
           </e>
         </e>
+        <e p="OrderRepositoryTests.cs" t="Include" />
         <e p="OrderTranslatorTests.cs" t="Include" />
         <e p="PaymentAssessorTests.cs" t="Include" />
         <e p="ReportTests.cs" t="Include" />
-        <e p="RepositoryTests.cs" t="Include" />
         <e p="StorageManagerTests.cs" t="Include" />
         <e p="StorageTests.cs" t="Include" />
+        <e p="TestHelper.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
