@@ -7,9 +7,9 @@ namespace CoffeeMachine
 
         public static readonly IDrinkType Tea = CreateTea();
 
-        public static DrinkMakerProtocol CreateDrinkMakerProtocol()
+        public static CoffeeMachine CreateDrinkMakerProtocol()
         {
-            return new DrinkMakerProtocol(CreatePaymentAssessor(), CreateOrderTranslator(), CreateStorageManager());
+            return new CoffeeMachine(CreatePaymentAssessor(), CreateOrderTranslator(), CreateStorageManager(), CreateOutput(), CreateEmailNotifier());
         }
         
         private static IPaymentAssessor CreatePaymentAssessor()
@@ -19,17 +19,17 @@ namespace CoffeeMachine
         
         private static IOrderTranslator CreateOrderTranslator()
         {
-            return new OrderTranslator();
+            return new DrinkMakerProtocol();
         }
         
         private static IStorageManager CreateStorageManager()
         {
-            return new StorageManager(CreateDrinkStorages(), CreateDrinkQuantityChecker(), CreateEmailNotifier());
+            return new StorageManager(CreateDrinkStorages(), CreateDrinkQuantityChecker());
         }
 
         private static List<IDrinkStorage> CreateDrinkStorages()
         {
-           var teaStorage = new Storage(10, Tea);
+           var teaStorage = new Storage(0, Tea);
            return new List<IDrinkStorage>() {teaStorage};
         }
 
@@ -40,7 +40,7 @@ namespace CoffeeMachine
         
         private static INotifier CreateEmailNotifier()
         {
-            return new EmailNotifier(CreateOutput());
+            return new EmailNotifier();
         }
 
         private static IOutput CreateOutput()

@@ -2,16 +2,10 @@ namespace CoffeeMachine
 {
     public class EmailNotifier : INotifier
     {
-        private IOutput _output;
 
-        public EmailNotifier(IOutput output)
+        public string NotifyMissingDrink(IDrinkType drinkType)
         {
-            _output = output;
-        }
-
-        public void NotifyMissingDrink(IDrinkType drinkType)
-        {
-            _output.Write($"Notifying company... you have run out of {drinkType.Name}");
+            return $"Notifying company... you have run out of {drinkType.Name}";
         }
     }
 }

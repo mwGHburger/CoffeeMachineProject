@@ -1,6 +1,6 @@
 namespace CoffeeMachine
 {
-    public class OrderTranslator : IOrderTranslator
+    public class DrinkMakerProtocol : IOrderTranslator
     {
         public Instruction TranslateOrder(Order order)
         {

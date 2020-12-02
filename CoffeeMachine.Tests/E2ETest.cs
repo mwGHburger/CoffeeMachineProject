@@ -20,8 +20,8 @@ namespace CoffeeMachine.Tests
             var drinkQuantityChecker = new DrinkQuantityChecker();
             var emailNotifier = new EmailNotifier(output);
             var storageManager = new StorageManager(drinkStorageList, drinkQuantityChecker, emailNotifier);
-            var orderTranslator = new OrderTranslator();
-            var drinkMakerProtocol = new DrinkMakerProtocol(paymentAssessor, orderTranslator, storageManager);
+            var orderTranslator = new DrinkMakerProtocol();
+            var drinkMakerProtocol = new CoffeeMachine(paymentAssessor, orderTranslator, storageManager);
 
             var actualResult = drinkMakerProtocol.HandleOrder(order, payment).InstructionMessage;
             Assert.Equal(expectedResult , actualResult);

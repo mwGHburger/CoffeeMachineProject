@@ -3,63 +3,56 @@ using Xunit;
 
 namespace CoffeeMachine.Tests
 {
-    public class DrinkMakerProtocolTests
+    public class OrderTranslatorTests
     {
-        Mock<IStorageManager> storageManager = new Mock<IStorageManager>();
-        Mock<IPaymentAssessor> paymentAssessor = new Mock<IPaymentAssessor>();
-        Mock<IOrderTranslator> orderTranslator = new Mock<IOrderTranslator>();
+        Mock<IDrinkType> drinkType = new Mock<IDrinkType>();
+        DrinkMakerProtocol orderTranslator = new DrinkMakerProtocol();
 
         [Fact]
-        public void HandleOrderShould_ReturnCorrectMessage_WhenStorageIsEmpty()
+        public void TranslateOrder_ShouldReturnInstructionObject()
         {
-            var order = new Order(TestHelper.SetupTea(), 1);
-            var payment = new Payment(1);
-            var drinkMakerProtocol = new DrinkMakerProtocol(paymentAssessor.Object, orderTranslator.Object, storageManager.Object);
+            var sugarQuantity = 2;
+            
+            Order order = new Order(drinkType.Object,sugarQuantity);
 
-            storageManager.Setup(x => x.IsEmpty(It.IsAny<IDrinkType>())).Returns(true);
-            orderTranslator.Setup(x => x.ProduceMessage("tea is empty")).Returns(new Instruction("tea is empty"));
-                
-            var actualResult = drinkMakerProtocol.HandleOrder(order, payment);
-        
-            Assert.Equal("M:tea is empty", actualResult.InstructionMessage);
+            drinkType.Setup(x => x.Name).Returns("tea");
+
+            var result = orderTranslator.TranslateOrder(order);
+            Assert.IsType<Instruction>(result);
         }
 
-        
-        [Fact]
-        public void HandleOrderShould_ReturnCorrectOrderString_WhenSufficientPaymentAmount_AndDrinkTypeIsNotEmpty()
+        [Theory]
+        [InlineData("T:1:0", "tea", 0.4, "T", 1)]
+        [InlineData("H::", "chocolate", 0.5,"H", 0)]
+        [InlineData("C:2:0", "coffee", 0.6, "C", 2)]
+        [InlineData("O::", "orange juice", 0.6, "O", 0)]
+        //Open-Close principle
+        public void TranslateOrder_ShouldReturnCorrectString_FromOrderObject(string expected, string drinkName, double drinkCost,string character, int sugarQuantity)
         {
-            var order = new Order(TestHelper.SetupTea(),1);
-            var payment = new Payment(1);
-            var drinkMakerProtocol = new DrinkMakerProtocol(paymentAssessor.Object, orderTranslator.Object, storageManager.Object);
+            Order order = new Order(drinkType.Object, sugarQuantity);
 
-            storageManager.Setup(x => x.IsEmpty(order.DrinkType)).Returns(false);
-            paymentAssessor.Setup(x => x.IsPaymentNotEnough(order, payment)).Returns(false);
-            orderTranslator.Setup(x => x.TranslateOrder(order)).Returns(new Instruction("T","1","0",""));
+            drinkType.Setup(x => x.Name).Returns(drinkName);
+            drinkType.Setup(x => x.Cost).Returns(drinkCost);
+            drinkType.Setup(x => x.Character).Returns(character);
 
-            var actualResult = drinkMakerProtocol.HandleOrder(order, payment);
-
-            storageManager.Verify(x=> x.ReduceDrinkQuantity(order.DrinkType), Times.Exactly(1));
-
-            Assert.Equal("T:1:0", actualResult.InstructionMessage);
+            var actualResult = orderTranslator.TranslateOrder(order);
+            Assert.Equal(expected, actualResult.InstructionMessage);
         }
-        
-        [Fact]
-        public void HandleOrderShould_ReturnCorrectOrderString_WhenInSufficientPaymentAmount_AndDrinkTypeIsNotEmpty()
+
+        [Theory]
+        [InlineData("Ch::", "coffee", 0.6, "C", 0, true)]
+        [InlineData("Hh:1:0", "chocolate", 0.5,"H", 1, true)]
+        [InlineData("Th:2:0", "tea", 0.4,"T", 2, true)]
+        public void TranslateOrder_ShouldReturnCorrectString_FromExtraHotOrderObject(string expected, string drinkName, double drinkCost,string character, int sugarQuantity, bool isExtraHot)
         {
-            var order = new Order(TestHelper.SetupTea(),1);
-            var payment = new Payment(0.3);
-            var drinkMakerProtocol = new DrinkMakerProtocol(paymentAssessor.Object, orderTranslator.Object, storageManager.Object);
-            var expectedChange = 0.1;
+            Order order = new Order(drinkType.Object, sugarQuantity, isExtraHot);
 
-            storageManager.Setup(x => x.IsEmpty(It.IsAny<IDrinkType>())).Returns(false);
-            paymentAssessor.Setup(x => x.IsPaymentNotEnough(order, payment)).Returns(true);
-            orderTranslator.Setup(x => x.ProduceMessage($"Not enough, missing {expectedChange} euro")).Returns(new Instruction($"Not enough, missing {expectedChange} euro"));
-
-            var actualResult = drinkMakerProtocol.HandleOrder(order, payment);
-        
-            Assert.Equal($"M:Not enough, missing {expectedChange} euro", actualResult.InstructionMessage);
+            drinkType.Setup(x => x.Name).Returns(drinkName);
+            drinkType.Setup(x => x.Cost).Returns(drinkCost);
+            drinkType.Setup(x => x.Character).Returns(character);
+            
+            var actualResult = orderTranslator.TranslateOrder(order);
+            Assert.Equal(expected, actualResult.InstructionMessage);
         }
-        
-        //TODO: Refactor tests/ add repositories to organize files/ make it work
     }
 }

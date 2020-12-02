@@ -8,9 +8,8 @@ namespace CoffeeMachine
         {
             var drinkMakerProtocol = ClassInstantiatorFactory.CreateDrinkMakerProtocol();
             var order = new Order(ClassInstantiatorFactory.Tea, 1, true);
-            var payment = new Payment(0.4);
-            var instruction = drinkMakerProtocol.HandleOrder(order, payment);
-            Console.WriteLine(instruction.InstructionMessage);
+            var payment = new Payment(0.1);
+            drinkMakerProtocol.HandleOrder(order, payment);
         }
     }
 }
