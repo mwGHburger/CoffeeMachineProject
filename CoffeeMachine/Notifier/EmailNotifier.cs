@@ -1,6 +1,6 @@
 namespace CoffeeMachine
 {
-    public class EmailNotifier
+    public class EmailNotifier : INotifier
     {
         private IOutput _output;
 

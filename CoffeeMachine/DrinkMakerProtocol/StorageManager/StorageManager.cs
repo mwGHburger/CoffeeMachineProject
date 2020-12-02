@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace CoffeeMachine
 {
-    public class StorageManager
+    public class StorageManager : IStorageManager
     {
         private List<IDrinkStorage> _drinks;
         private IDrinkQuantityChecker _drinkQuantityChecker;

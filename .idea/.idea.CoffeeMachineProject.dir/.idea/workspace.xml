@@ -23,9 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c45f1d-0c7e-4db1-8a7a-21d263f79031" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine.Tests/E2ETest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/ClassInstantiatorFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoffeeMachine/ConsoleOutput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoffeeMachineProject.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/Notifier/EmailNotifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/Notifier/EmailNotifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoffeeMachine/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +64,12 @@
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/PaymentAssessorTests.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine.Tests/DrinkMakerProtocolTests.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/ConsoleOutput.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Notifier/EmailNotifier.cs" />
         <option value="$PROJECT_DIR$/CoffeeMachine/DrinkMakerProtocol/StorageManager/StorageManager.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine.Tests/E2ETest.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/ClassInstantiatorFactory.cs" />
+        <option value="$PROJECT_DIR$/CoffeeMachine/Program.cs" />
       </list>
     </option>
   </component>
@@ -75,7 +85,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.CoffeeMachine">
     <configuration name="CoffeeMachine" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -107,6 +117,7 @@
       <workItem from="1603859060527" duration="2720000" />
       <workItem from="1604462822359" duration="2949000" />
       <workItem from="1606179058883" duration="4143000" />
+      <workItem from="1606705644884" duration="3019000" />
     </task>
     <servers />
   </component>
@@ -131,22 +142,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1850" height="362" key="GridCell.Tab.0.bottom" timestamp="1603892175100">
-      <screen x="383" y="-1057" width="1920" height="1057" />
+    <state width="1835" height="266" key="GridCell.Tab.0.bottom" timestamp="1606711037223">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1850" height="362" key="GridCell.Tab.0.bottom/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1603892175100" />
-    <state width="1850" height="362" key="GridCell.Tab.0.center" timestamp="1603892175099">
-      <screen x="383" y="-1057" width="1920" height="1057" />
+    <state width="1835" height="266" key="GridCell.Tab.0.bottom/383.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1606711037223" />
+    <state width="1835" height="266" key="GridCell.Tab.0.bottom/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1606708039825" />
+    <state width="1835" height="266" key="GridCell.Tab.0.center" timestamp="1606711037222">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1850" height="362" key="GridCell.Tab.0.center/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1603892175099" />
-    <state width="1850" height="362" key="GridCell.Tab.0.left" timestamp="1603892175090">
-      <screen x="383" y="-1057" width="1920" height="1057" />
+    <state width="1835" height="266" key="GridCell.Tab.0.center/383.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1606711037222" />
+    <state width="1835" height="266" key="GridCell.Tab.0.center/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1606708039824" />
+    <state width="1835" height="266" key="GridCell.Tab.0.left" timestamp="1606711037222">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1850" height="362" key="GridCell.Tab.0.left/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1603892175090" />
-    <state width="1850" height="362" key="GridCell.Tab.0.right" timestamp="1603892175100">
-      <screen x="383" y="-1057" width="1920" height="1057" />
+    <state width="1835" height="266" key="GridCell.Tab.0.left/383.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1606711037222" />
+    <state width="1835" height="266" key="GridCell.Tab.0.left/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1606708039823" />
+    <state width="1835" height="266" key="GridCell.Tab.0.right" timestamp="1606711037222">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1850" height="362" key="GridCell.Tab.0.right/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1603892175100" />
+    <state width="1835" height="266" key="GridCell.Tab.0.right/383.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1606711037222" />
+    <state width="1835" height="266" key="GridCell.Tab.0.right/383.-1057.1920.1057/0.23.1680.1027@383.-1057.1920.1057" timestamp="1606708039825" />
     <state width="1850" height="362" key="GridCell.Tab.1.bottom" timestamp="1603892175102">
       <screen x="383" y="-1057" width="1920" height="1057" />
     </state>
